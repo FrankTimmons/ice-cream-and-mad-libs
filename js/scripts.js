@@ -4,7 +4,7 @@ $(document).ready(function() {
     return somethingCapital;
   }
 
-  $("#formOne").submit(function(event) {
+  $("#formOne").submit(function() {
     event.preventDefault();
     const person1Input = $("input#person1").val();
     const person2Input = $("input#person2").val();
@@ -20,8 +20,9 @@ $(document).ready(function() {
     $(".verb").text(verbInput);
     $(".noun").text(nounInput);
 
-    const somethingInput = $("input#something").val();
+    $("#story").show();
     
+    const somethingInput = $("input#something").val();
     $("#result").text(capitalize(somethingInput));
   });
 });
