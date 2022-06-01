@@ -1,4 +1,9 @@
 $(document).ready(function() {
+  function capitalize(str) {
+    let somethingCapital = str.toUpperCase();
+    return somethingCapital;
+  }
+
   $("#formOne").submit(function(event) {
     event.preventDefault();
     const person1Input = $("input#person1").val();
@@ -15,6 +20,8 @@ $(document).ready(function() {
     $(".verb").text(verbInput);
     $(".noun").text(nounInput);
 
-    $("#story").show();
+    const somethingInput = $("input#something").val();
+    
+    $("#result").text(capitalize(somethingInput));
   });
 });
